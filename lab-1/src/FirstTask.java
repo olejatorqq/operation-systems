@@ -3,10 +3,10 @@ import java.io.File;
 import java.nio.file.FileStore;
 import java.nio.file.Files;
 
-//Вывести информацию в консоль о логических дисках, именах, метке тома, размере и типе файловой системы
+//1. Вывести информацию в консоль о логических дисках, именах, метке тома, размере и типе файловой системы
 public class FirstTask {
     public static void printSystemInfo(){
-
+        int count = 0;
         File[] drives = File.listRoots();
         FileSystemView fileSystemView = FileSystemView.getFileSystemView();
 
@@ -22,6 +22,9 @@ public class FirstTask {
                 System.out.println("Тип файловой системы: " + fileStore.type());
             } catch (Exception e) {
                 e.printStackTrace();
+            }
+            if (++count != drives.length){
+                System.out.println();
             }
         }
     }
