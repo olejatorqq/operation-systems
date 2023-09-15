@@ -9,6 +9,7 @@ public class Main {
         lineSeparator();
     }
 
+
     public static void lineSeparator(){
         for(int i = 0; i < 40; i++){
             System.out.print("-");
